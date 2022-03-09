@@ -1,0 +1,11 @@
+name: 'GitHub Actions Ruby Sample'
+description: 'A sample GitHub Actions'
+author: 'noraworld'
+inputs: 
+  my_variable:
+    description: 'My variable'
+    default: 'default_variable'
+runs:
+  using: 'ruby'
+  args:
+    - ${{ inputs.my_variable }}

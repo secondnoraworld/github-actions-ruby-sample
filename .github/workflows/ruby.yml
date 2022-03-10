@@ -19,5 +19,3 @@ jobs:
     steps:
       - name: Set up Ruby
         uses: secondnoraworld/github-actions-ruby-sample@main
-        with:
-          my_variable: "test"

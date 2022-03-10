@@ -1,1 +1,1 @@
-puts "Hello ${{ github.event.inputs.my_variable }}!"
+puts "Hello #{ENV['MY_VARIABLE']}!"

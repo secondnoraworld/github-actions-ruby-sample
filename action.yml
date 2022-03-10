@@ -22,3 +22,4 @@ runs:
       shell: sh
       env:
         MY_VARIABLE: ${{ inputs.my_variable }}
+        MY_SECRET: ${{ secrets.MY_SECRET }}

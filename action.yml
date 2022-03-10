@@ -20,5 +20,3 @@ runs:
     - name: Run sample app
       run: ruby app.rb
       shell: sh
-  args:
-    - ${{ inputs.my_variable }}

@@ -21,4 +21,4 @@ jobs:
         uses: secondnoraworld/github-actions-ruby-sample@main
         with:
           my_variable: "foobarbaz"
-          my_secret_variable: "jfewkjfoiewjfwifjewjfifjwfiae"
+          my_secret_variable: ${{ secrets.MY_SECRETS }}

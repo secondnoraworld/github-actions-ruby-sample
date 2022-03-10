@@ -6,8 +6,7 @@ inputs:
     description: 'My variable'
     default: 'default_variable'
 runs:
-  args:
-    - ${{ inputs.my_variable }}
+  using: "composite"
   steps:
     - uses: actions/checkout@v2
     - name: Set up Ruby
@@ -20,3 +19,5 @@ runs:
         bundler-cache: true # runs 'bundle install' and caches installed gems automatically
     - name: Run sample app
       run: ruby app.rb
+    args:
+      - ${{ inputs.my_variable }}

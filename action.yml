@@ -32,6 +32,7 @@ runs:
       env:
         MY_VARIABLE: ${{ inputs.my_variable }}
         MY_SECRET_VARIABLE: ${{ inputs.my_secret_variable }}
+        CHANGED_FILES: ${{ outputs.changed_files }}
 
     - id: get-changed-files
       name: Get changed files

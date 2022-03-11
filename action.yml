@@ -12,6 +12,7 @@ runs:
   using: "composite"
   steps:
     - uses: actions/checkout@v2
+
     - name: Set up Ruby
     # To automatically get bug fixes and new Ruby versions for ruby/setup-ruby,
     # change this to (see https://github.com/ruby/setup-ruby#versioning):
@@ -20,9 +21,14 @@ runs:
       with:
         ruby-version: '3.1'
         bundler-cache: true # runs 'bundle install' and caches installed gems automatically
+
     - name: Run sample app
       run: ruby app.rb
       shell: sh
       env:
         MY_VARIABLE: ${{ inputs.my_variable }}
         MY_SECRET_VARIABLE: ${{ inputs.my_secret_variable }}
+
+    - name: Get changed files
+      run: echo test
+      shell: sh

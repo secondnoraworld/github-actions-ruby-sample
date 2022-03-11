@@ -28,7 +28,7 @@ runs:
         
     - id: get-changed-files
       name: Get changed files
-      run: echo "::set-output name=files::$(git diff --name-only --diff-filter=AMD)"
+      run: echo "::set-output name=files::$(echo foobarbaz)"
       shell: sh
       
     - name: test

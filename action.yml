@@ -32,7 +32,7 @@ runs:
       shell: sh
       
     - name: test
-      run: git diff --name-only --diff-filter=AMD
+      run: echo "changed files are $(git diff --name-only --diff-filter=AMD)"
       shell: sh
 
     - name: Run sample app

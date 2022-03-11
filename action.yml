@@ -30,6 +30,10 @@ runs:
       name: Get changed files
       run: echo "::set-output name=files::$(git diff --name-only --diff-filter=AMD)"
       shell: sh
+      
+    - name: test
+      run: git diff --name-only --diff-filter=AMD
+      shell: sh
 
     - name: Run sample app
       run: ruby app.rb

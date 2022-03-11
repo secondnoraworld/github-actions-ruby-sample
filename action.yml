@@ -8,6 +8,10 @@ inputs:
   my_secret_variable:
     description: 'My secret variable'
     default: 'default_secret'
+outputs:
+  changed_files:
+    description: 'Get changed files'
+    value: ${{ steps.get-changed-files.outputs.files }}
 runs:
   using: "composite"
   steps:
@@ -29,6 +33,7 @@ runs:
         MY_VARIABLE: ${{ inputs.my_variable }}
         MY_SECRET_VARIABLE: ${{ inputs.my_secret_variable }}
 
-    - name: Get changed files
-      run: echo test
+    - id: get-changed-files
+      name: Get changed files
+      run: echo "::set-output name=files::$(git diff --name-only --diff-filter=AMD)"
       shell: sh

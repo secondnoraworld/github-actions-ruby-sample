@@ -6,6 +6,6 @@ puts "Added files are #{ENV['ADDED_FILES'].empty? ? 'NONE' : ENV['ADDED_FILES']}
 puts "Modified files are #{ENV['MODIFIED_FILES'].empty? ? 'NONE' : ENV['MODIFIED_FILES']}"
 puts "Deleted files are #{ENV['DELETED_FILES'].empty? ? 'NONE' : ENV['DELETED_FILES']}"
 
-File.open('articles/test01.txt', 'r') do |file|
-  puts file.read
+File.open('articles/test01.txt', 'a') do |file|
+  file.puts 'Hello from app.rb'
 end

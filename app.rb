@@ -1,5 +1,7 @@
-puts "Hello #{ENV['MY_VARIABLE']}!"
-puts "My secret variable is #{ENV['MY_SECRET_VARIABLE']}"
+puts "DIR is #{ENV['DIR']}!"
+puts "QIITA_ACCESS_TOKEN is #{ENV['QIITA_ACCESS_TOKEN']}"
+puts "MAPPING_FILEPATH is #{ENV['MAPPING_FILEPATH']}"
+
 puts "Added files are #{ENV['ADDED_FILES']}"
 puts "Modified files are #{ENV['MODIFIED_FILES']}"
 puts "Deleted files are #{ENV['DELETED_FILES']}"

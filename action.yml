@@ -58,6 +58,6 @@ runs:
         MODIFIED_FILES: ${{ steps.get-modified-files.outputs.files }}
         DELETED_FILES: ${{ steps.get-deleted-files.outputs.files }}
 
-    - name: Git status
-      run: git status
+    - name: Update file
+      run: git commit -am "Update file"
       shell: sh

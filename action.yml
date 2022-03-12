@@ -51,7 +51,6 @@ runs:
       run: ruby app.rb
       shell: sh
       env:
-        DIR: ${{ inputs.dir }}
         QIITA_ACCESS_TOKEN: ${{ inputs.qiita_access_token }}
         MAPPING_FILEPATH: ${{ inputs.mapping_filepath }}
         ADDED_FILES: ${{ steps.get-added-files.outputs.files }}

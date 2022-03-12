@@ -2,11 +2,11 @@
 
 source 'https://rubygems.org'
 
-ruby '3.1.1'
+gem 'jekyll', '~> 4.2.0'
+gem 'jemoji'
+gem 'minima', '~> 2.5'
+gem 'rubocop'
 
-gem 'faraday'
-
-group :development, :test do
-  gem 'dotenv'
-  gem 'pry-byebug'
+group :jekyll_plugins do
+  gem 'jekyll-feed', '~> 0.12'
 end

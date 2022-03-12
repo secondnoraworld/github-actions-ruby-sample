@@ -27,7 +27,7 @@ runs:
         
     - id: get-changed-files
       name: Get changed files
-      run: echo "::set-output name=files::$(echo foobarbaz)"
+      run: echo "::set-output name=changed_files::$(echo foobarbaz)"
       shell: sh
       
     - name: test

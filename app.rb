@@ -1,3 +1,5 @@
 puts "Hello #{ENV['MY_VARIABLE']}!"
 puts "My secret variable is #{ENV['MY_SECRET_VARIABLE']}"
-puts "Changed files are #{ENV['CHANGED_FILES']}"
+puts "Added files are #{ENV['ADDED_FILES']}"
+puts "Modified files are #{ENV['MODIFIED_FILES']}"
+puts "Deleted files are #{ENV['DELETED_FILES']}"

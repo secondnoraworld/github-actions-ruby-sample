@@ -21,7 +21,8 @@ inputs:
 runs:
   using: "composite"
   steps:
-    - uses: actions/checkout@v2
+    - name: Enable Git operation
+      uses: actions/checkout@v2
       with:
         fetch-depth: 0
 

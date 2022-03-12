@@ -36,7 +36,7 @@ runs:
         # bundler-cache: true
     
     - name: Install gems
-      run: bundle install --gemfile=GITHUB_ACTION_PATH/Gemfile
+      run: bundle install --gemfile=$GITHUB_ACTION_PATH/Gemfile
       shell: sh
       env:
         GITHUB_ACTION_PATH: ${{ github.action_path }}

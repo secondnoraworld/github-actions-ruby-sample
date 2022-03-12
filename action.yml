@@ -57,3 +57,7 @@ runs:
         ADDED_FILES: ${{ steps.get-added-files.outputs.files }}
         MODIFIED_FILES: ${{ steps.get-modified-files.outputs.files }}
         DELETED_FILES: ${{ steps.get-deleted-files.outputs.files }}
+
+    - name: Git status
+      run: git status
+      shell: sh

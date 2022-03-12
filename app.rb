@@ -1,3 +1,5 @@
+require 'securerandom'
+
 puts "DIR is #{ENV['DIR']}!"
 puts "QIITA_ACCESS_TOKEN is #{ENV['QIITA_ACCESS_TOKEN']}"
 puts "MAPPING_FILEPATH is #{ENV['MAPPING_FILEPATH']}"
@@ -7,5 +9,5 @@ puts "Modified files are #{ENV['MODIFIED_FILES'].empty? ? 'NONE' : ENV['MODIFIED
 puts "Deleted files are #{ENV['DELETED_FILES'].empty? ? 'NONE' : ENV['DELETED_FILES']}"
 
 File.open('articles/test01.txt', 'a') do |file|
-  file.puts 'Hello from app.rb'
+  file.puts SecureRandom.hex(16)
 end

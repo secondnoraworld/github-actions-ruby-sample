@@ -33,7 +33,7 @@ runs:
       uses: ruby/setup-ruby@v1
       with:
         ruby-version: '3.1'
-        bundler-cache: true
+        # bundler-cache: true
         
     - id: get-added-files
       name: Get added files
@@ -60,11 +60,11 @@ runs:
         MODIFIED_FILES: ${{ steps.get-modified-files.outputs.files }}
         DELETED_FILES: ${{ steps.get-deleted-files.outputs.files }}
 
-    - name: Update file
-      # https://github.com/actions/checkout/tree/2d1c1198e79c30cca5c3957b1e3b65ce95b5356e#push-a-commit-using-the-built-in-token
-      run: |
-        git config user.name github-actions
-        git config user.email github-actions@github.com
-        git commit -am "Update file"
-        git push
-      shell: sh
+#     - name: Update file
+#       # https://github.com/actions/checkout/tree/2d1c1198e79c30cca5c3957b1e3b65ce95b5356e#push-a-commit-using-the-built-in-token
+#       run: |
+#         git config user.name github-actions
+#         git config user.email github-actions@github.com
+#         git commit -am "Update file"
+#         git push
+#       shell: sh

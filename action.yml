@@ -31,7 +31,7 @@ runs:
       shell: sh
       
     - name: test
-      run: echo "changed files are $(git diff --name-only --diff-filter=AMD ${{ github.event.pull_request.base.sha }} ${{ github.sha }} | xargs)"
+      run: echo "changed files are $(git diff --name-only --diff-filter=AMD ${{ github.event.before }} ${{ github.sha }} | xargs)"
       shell: sh
 
     - name: Run sample app

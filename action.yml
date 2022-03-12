@@ -8,10 +8,9 @@ inputs:
   my_secret_variable:
     description: 'My secret variable'
     default: 'default_secret'
-outputs:
   changed_files:
     description: 'Get changed files'
-    value: ${{ steps.get-changed-files.outputs.files }}
+    # value: ${{ steps.get-changed-files.outputs.files }}
 runs:
   using: "composite"
   steps:

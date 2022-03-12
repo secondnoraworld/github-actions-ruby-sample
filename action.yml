@@ -1,6 +1,9 @@
 name: 'GitHub Actions Ruby Sample'
 description: 'A sample GitHub Actions'
 author: 'noraworld'
+branding:
+  icon: search
+  color: green
 inputs: 
   dir:
     description: 'Specify a directory in which files you want to track and publish to Qiita'
